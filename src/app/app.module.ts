@@ -20,6 +20,13 @@ import { SoutenantComponent } from './component/soutenant/soutenant.component';
 import { GerantPfeComponent } from './component/gerant-pfe/gerant-pfe.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { CreationprojetComponent } from './component/formulaire/creationprojet/creationprojet.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { EnvoyermessageComponent } from './component/formulaire/envoyermessage/envoyermessage.component';
+import { PubliercommentaireComponent } from './component/formulaire/publiercommentaire/publiercommentaire.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +37,10 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
     EtudiantComponent,
     ProfesseurComponent,
     SoutenantComponent,
-    GerantPfeComponent
+    GerantPfeComponent,
+    CreationprojetComponent,
+    EnvoyermessageComponent,
+    PubliercommentaireComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,10 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

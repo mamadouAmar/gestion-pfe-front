@@ -1,8 +1,8 @@
 export class Competence {
     constructor(
-        private intitule : String,
-        private domaine : String,
-        private description : Text
+        public intitule : String,
+        public domaine : String,
+        public description : String
     )
     {
 

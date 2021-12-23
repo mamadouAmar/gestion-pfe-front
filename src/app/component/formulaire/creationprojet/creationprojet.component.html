@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<h1>Créer un suje de PFE</h1>
+<div ng-app="sample">
+
+    <form class="form-horizontal"  name="creationprojet" (ngSubmit)="onSubmitForm()">
+    <div class="form-group">
+    <label class="col-md-3 control-label" for="sujet">Sujet</label>
+    <div class="col-md-4">
+        <select id="sujet" type="sujet" class="form-control" name="sujet" ng-model="sujet" > 
+            <option id="counter_id" >{{sujet[0]}}</option>
+            <option id="counter_id" >{{sujet[1]}}</option>
+            <option id="counter_id" >{{sujet[2]}}</option>
+            <option id="counter_id" >{{sujet[3]}}</option>
+        </select>
+    </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label" for="annee">Année académique</label>
+        <div class="col-md-4">
+            <input id="annee" type="annee" class="form-control" name="annee" ng-model="annee" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label" for="encadreur">Encadreurs : </label>
+        <div class="col-md-4">
+            <select id="encadreur" type="encadreur" class="form-control" name="encadreur" ng-model="encadreur" > 
+                <option id="counter_id" >{{encadreurs[0].prenom}} {{encadreurs[0].nom}}</option>
+                <option id="counter_id" >{{encadreurs[1].prenom}} {{encadreurs[1].nom}}</option>
+                <option id="counter_id" >{{encadreurs[2].prenom}} {{encadreurs[2].nom}}</option>
+                <option id="counter_id" >{{encadreurs[3].prenom}} {{encadreurs[3].nom}}</option>
+            </select>
+        </div> 
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label" for="competence">Competences : </label>
+        <div class="col-md-4">
+            <select id="competence" type="competence" class="form-control" name="competence" ng-model="competence" > 
+                <option id="counter_id" >{{competences[0].intitule}}</option>
+                <option id="counter_id" >{{competences[1].intitule}}</option>
+                <option id="counter_id" >{{competences[2].intitule}}</option>
+                <option id="counter_id" >{{competences[3].intitule}}</option>
+                <option id="counter_id" >{{competences[4].intitule}}</option>
+                <option id="counter_id" >{{competences[5].intitule}}</option>
+            </select>
+        </div> 
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label" for="departement">Département : </label>
+        <div class="col-md-4">
+            <select id="departement" type="departement" class="form-control" name="departement" ng-model="departement" > 
+                <option id="counter_id" >{{departements[0].intitule}}</option>
+                <option id="counter_id" >{{departements[1].intitule}}</option>
+                <option id="counter_id" >{{departements[2].intitule}}</option>
+                <option id="counter_id" >{{departements[3].intitule}}</option>
+            </select>
+        </div> 
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-3 col-md-9">
+            <input type="submit" class="btn btn-default" value="Créer le projet" />
+        </div>
+    </div>
+    </form>
+ </div>

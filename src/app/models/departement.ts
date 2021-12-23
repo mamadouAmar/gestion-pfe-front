@@ -1,8 +1,8 @@
 export class Departement {
     constructor(
-        private id : Number,
-        private intitule : String,
-        private acronyme : String
+        public id : Number,
+        public intitule : String,
+        public acronyme : String
     ){
 
     }

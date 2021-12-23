@@ -2,12 +2,12 @@ import { User } from "./user";
 
 export class Encadreur extends User{
     constructor(
-        protected id: Number,
-        protected prenom : String,
-        protected nom : String,
-        protected mail : String,
-        protected password: String,
-        protected matricule: String
+        public id: Number,
+        public prenom : String,
+        public nom : String,
+        public mail : String,
+        public password: String,
+        public matricule: String
     )
     {
         super(id, prenom, nom, mail, password);
