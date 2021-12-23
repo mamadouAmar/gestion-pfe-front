@@ -1,29 +1,266 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">Accueil</a>
-      <a mat-list-item href="#">Projet</a>
-      <a mat-list-item href="#">Reunion</a>
-      <a mat-list-item href="#">Soutenance</a>
-      <a mat-list-item href="#">Rapport</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>gestion-pfe</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="/assets/style.css" />
+
+    <!-- Boxiocns CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,900,900italic,700italic,700,500italic,400italic,500,300italic,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="sidebar {{ close }}">
+      <div class="logo-details">
+        <i class="fa fa-building-o"></i>
+        <span class="logo_name">EPT</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Home</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="index.html">Home</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="projectPage.html">
+              <i class="bx bx-archive"></i>
+              <span class="link_name">Projets</span>
+            </a>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="projectPage.html">Projets</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bxl-zoom"></i>
+              <span class="link_name">Réunions</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Réunions</a></li>
+            <li><a href="#">Encadreurs</a></li>
+            <li><a href="#">Etudiants</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-group"></i>
+            <span class="link_name">Encadreurs</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Encadreurs</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="SoutenantPage.html">
+            <i class="fa fa-graduation-cap"></i>
+            <span class="link_name">Etudiants</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="SoutenantPage.html">Etudiants</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="fa fa-info-circle"></i>
+              <span class="link_name">Soutenance</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Soutenance</a></li>
+            <li><a href="#">Salles</a></li>
+            <li><a href="#">Date</a></li>
+            <li><a href="#">Jury</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-message"></i>
+            <span class="link_name">Messages</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Messages</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="assets/image/profile.jpg" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Ndeye Fatou</div>
+              <div class="job">Responsable PFE</div>
+            </div>
+            <i
+              class="bx bx-log-out"
+              onclick="window.location.href='new 43.html'"
+            ></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section
+      class="home-section"
+      style="
+        background-image: url('/assets/image/3.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      "
+    >
+      <div class="home-content">
+        <i class="bx bx-menu" (click)="onCacher()"></i>
+        <span class="text">Gestion des projets de fin d'étude</span>
+      </div>
+
+      <div class="overview-boxes">
+        <div class="box" routerLink="/projet">
+          <div class="right-side">
+            <div class="box-topic">Projet</div>
+            <div class="number">16</div>
+            <div class="indicator">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="fa fa-folder-open-o cart"></i>
+        </div>
+        <div class="box" routerLink="/etudiant">
+          <div class="right-side">
+            <div class="box-topic">Soutenant</div>
+            <div class="number">16</div>
+            <div class="indicator">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="fa fa-graduation-cap cart two"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic"></div>
+            <div class="number" style="margin-bottom: 5%">Soutenance</div>
+            <div class="indicator">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="fa fa-building-o cart three"></i>
+        </div>
+      </div>
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Encadreurs</div>
+            <div class="number">15</div>
+            <div class="indicator">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="bx bxs-group cart"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Jury</div>
+            <div class="number">10</div>
+            <div class="indicator">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="fa fa-handshake-o cart two"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic"></div>
+            <div class="number" style="margin-bottom: 5%">Avancement</div>
+            <div class="indicator">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="fa fa-hourglass-half cart three"></i>
+        </div>
+      </div>
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic"></div>
+            <div class="number">Calendrier</div>
+            <div class="indicator" style="margin-top: 10px">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="fa fa-calendar cart"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic"></div>
+            <div class="number">Messages</div>
+            <div class="indicator" style="margin-top: 10px">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="bx bx-message cart two"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic"></div>
+            <div class="number">Réunion</div>
+            <div class="indicator" style="margin-top: 10px">
+              <i class="bx bx-right-arrow-alt"></i>
+              <span class="text">More information</span>
+            </div>
+          </div>
+          <i class="bx bxl-zoom cart three"></i>
+        </div>
+      </div>
+
+      <!-- HEADER -->
+
+      <!-- NAVBAR -->
+
+      <!-- FILTER -->
+
+      <!-- PORTFOLIO -->
+
+      <!-- SCRIPT -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript" src="/assets/js/main.min.js"></script>
+    </section>
+  </body>
+</html>

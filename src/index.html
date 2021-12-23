@@ -1,16 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>GestionPfe</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body class="mat-typography">
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>GestionPfe</title>
+    <base href="/" />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+  <script type="text/javascript" src="assets/js1/Jquery.js"></script>
+
+  <script type="text/javascript" src="assets/js1/lightslider.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#autoWidth").lightSlider({
+        autoWidth: true,
+        loop: true,
+        onSliderLoad: function () {
+          $("#autoWidth").removeClass("cS-hidden");
+        },
+      });
+    });
+  </script>
+
+  <script src="assets/scriptjs.js"></script>
+  <script src="assets/script5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+  <script src="assets/script6.js"></script>
+  <script src="https://cdn.rawgit.com/nizarmah/calendar-javascript-lib/master/calendarorganizer.min.js"></script>
 </html>

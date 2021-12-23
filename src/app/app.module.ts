@@ -20,6 +20,8 @@ import { SoutenantComponent } from './component/soutenant/soutenant.component';
 import { GerantPfeComponent } from './component/gerant-pfe/gerant-pfe.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { BienvenueComponent } from './component/bienvenue/bienvenue.component';
+import { ProjetComponent } from './component/projet/projet.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
     EtudiantComponent,
     ProfesseurComponent,
     SoutenantComponent,
-    GerantPfeComponent
+    GerantPfeComponent,
+    BienvenueComponent,
+    ProjetComponent
   ],
   imports: [
     BrowserModule,

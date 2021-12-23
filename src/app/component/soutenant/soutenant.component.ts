@@ -11,5 +11,14 @@ export class SoutenantComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  close = "close";
 
+  onCacher() {
+    if(this.close == "close"){
+      this.close = ""
+    }
+    else{
+      this.close = "close";
+    }
+  }
 }

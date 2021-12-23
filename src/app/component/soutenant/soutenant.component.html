@@ -1,1 +1,289 @@
-<p>soutenant works!</p>
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="/assets/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,900,900italic,700italic,700,500italic,400italic,500,300italic,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="/assets/css1/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/css1/lightslider.css"
+    />
+  </head>
+  <body>
+    <div class="sidebar {{ close }}">
+      <div class="logo-details">
+        <i class="fa fa-building-o"></i>
+        <span class="logo_name">EPT</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Home</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="index.html">Home</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="projectPage.html">
+              <i class="bx bx-archive"></i>
+              <span class="link_name">Projets</span>
+            </a>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="projectPage.html">Projets</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bxl-zoom"></i>
+              <span class="link_name">Réunions</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Réunions</a></li>
+            <li><a href="#">Encadreurs</a></li>
+            <li><a href="#">Etudiants</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-group"></i>
+            <span class="link_name">Encadreurs</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Encadreurs</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="SoutenantPage.html">
+            <i class="fa fa-graduation-cap"></i>
+            <span class="link_name">Etudiants</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="SoutenantPage.html">Etudiants</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="fa fa-info-circle"></i>
+              <span class="link_name">Soutenance</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Soutenance</a></li>
+            <li><a href="#">Salles</a></li>
+            <li><a href="#">Date</a></li>
+            <li><a href="#">Jury</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-message"></i>
+            <span class="link_name">Messages</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Messages</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="assets/image/profile.jpg" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Ndeye Fatou</div>
+              <div class="job">Responsable PFE</div>
+            </div>
+            <i
+              class="bx bx-log-out"
+              onclick="window.location.href='new 43.html'"
+            ></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section
+      class="home-section"
+      style="
+        background-image: url('assets/image/3.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      "
+    >
+      <div class="home-content">
+        <i class="bx bx-menu" (click)="onCacher()"></i>
+        <span class="text">Gestion des projets de fin d'étude</span>
+      </div>
+
+      <section class="slider1">
+        <ul id="autoWidth" class="cs-hidden">
+          <li class="item-a">
+            <div class="box">
+              <div class="slide-img">
+                <img alt="1" src="assets/images1/15.jpg" />
+                <div class="overlay">
+                  <a href="#" class="buy-btn">Plus info</a>
+                </div>
+              </div>
+              <div class="detail-box">
+                <div class="type">
+                  <a href="#">Gestion des immersions</a>
+                  <span>Mohamed Sadji</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item-b">
+            <div class="box">
+              <div class="slide-img">
+                <img alt="2" src="assets/images1/20.jpeg" />
+                <div class="overlay">
+                  <a href="#" class="buy-btn">Plus info</a>
+                </div>
+              </div>
+              <div class="detail-box">
+                <div class="type">
+                  <a href="#">Recherche de stages</a>
+                  <span>Mbaye Sene</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item-c">
+            <div class="box">
+              <div class="slide-img">
+                <img alt="3" src="assets/images1/17.jpeg" />
+                <div class="overlay">
+                  <a href="#" class="buy-btn">Plus info</a>
+                </div>
+              </div>
+              <div class="detail-box">
+                <div class="type">
+                  <a href="#">Gestion des immersions</a>
+                  <span>Nasser Eddine </span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item-d">
+            <div class="box">
+              <div class="slide-img">
+                <img alt="4" src="assets/images1/19.jpeg" />
+                <div class="overlay">
+                  <a href="#" class="buy-btn">Plus info</a>
+                </div>
+              </div>
+              <div class="detail-box">
+                <!--type-------->
+                <div class="type">
+                  <a href="#">Recherche de stages</a>
+                  <span>Aida Sow</span>
+                </div>
+                <!--price-------->
+              </div>
+            </div>
+          </li>
+          <!--5------------------------------------>
+          <li class="item-e">
+            <div class="box">
+              <!--img-box---------->
+              <div class="slide-img">
+                <img alt="5" src="assets/images1/18.jpeg" />
+                <!--overlayer---------->
+                <div class="overlay">
+                  <!--buy-btn------>
+                  <a href="#" class="buy-btn">Plus info</a>
+                </div>
+              </div>
+              <div class="detail-box">
+                <!--type-------->
+                <div class="type">
+                  <a href="#">Gestion des immersions</a>
+                  <span>Farimata Ngom</span>
+                </div>
+                <!--price-------->
+              </div>
+            </div>
+          </li>
+          <!--6------------------------------------>
+          <li class="item-f">
+            <div class="box">
+              <!--img-box---------->
+              <div class="slide-img">
+                <img alt="6" src="assets/images1/16.jpg" />
+                <!--overlayer---------->
+                <div class="overlay">
+                  <!--buy-btn------>
+                  <a href="#" class="buy-btn">Plus info</a>
+                </div>
+              </div>
+              <div class="detail-box">
+                <!--type-------->
+                <div class="type">
+                  <a href="#">Gestion des PFE</a>
+                  <span>Madjiquene Faye</span>
+                </div>
+                <!--price-------->
+              </div>
+            </div>
+          </li>
+          <!--7------------------------------------>
+
+          <!--8------------------------------------>
+        </ul>
+      </section>
+
+      <!-- HEADER -->
+
+      <!-- NAVBAR -->
+
+      <!-- FILTER -->
+
+      <!-- PORTFOLIO -->
+
+      <!-- SCRIPT -->
+
+      <script type="text/javascript" src="assets/js/main.min.js"></script>
+    </section>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#autoWidth").lightSlider({
+          autoWidth: true,
+          loop: true,
+          onSliderLoad: function () {
+            $("#autoWidth").removeClass("cS-hidden");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

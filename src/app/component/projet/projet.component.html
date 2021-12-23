@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Boxiocns CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,900,900italic,700italic,700,500italic,400italic,500,300italic,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,900,900italic,700italic,700,500italic,400italic,500,300italic,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="/assets/blogg.css" />
+
+    <link rel="stylesheet" href="/assets/stylejs.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="sidebar {{ close }}">
+      <div class="logo-details">
+        <i class="fa fa-building-o"></i>
+        <span class="logo_name">EPT</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Home</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="index.html">Home</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="projectPage.html">
+              <i class="bx bx-archive"></i>
+              <span class="link_name">Projets</span>
+            </a>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="projectPage.html">Projets</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bxl-zoom"></i>
+              <span class="link_name">Réunions</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Réunions</a></li>
+            <li><a href="#">Encadreurs</a></li>
+            <li><a href="#">Etudiants</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-group"></i>
+            <span class="link_name">Encadreurs</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Encadreurs</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="SoutenantPage.html">
+            <i class="fa fa-graduation-cap"></i>
+            <span class="link_name">Etudiants</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="SoutenantPage.html">Etudiants</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="fa fa-info-circle"></i>
+              <span class="link_name">Soutenance</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Soutenance</a></li>
+            <li><a href="#">Salles</a></li>
+            <li><a href="#">Date</a></li>
+            <li><a href="#">Jury</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-message"></i>
+            <span class="link_name">Messages</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Messages</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="assets/image/profile.jpg" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Ndeye Fatou</div>
+              <div class="job">Responsable PFE</div>
+            </div>
+            <i
+              class="bx bx-log-out"
+              onclick="window.location.href='new 43.html'"
+            ></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section
+      class="home-section"
+      style="
+        background-image: url('assets/image/3.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: fixed;
+      "
+    >
+      <div class="home-content">
+        <i class="bx bx-menu" (click)="onCacher()"></i>
+        <span class="text">Gestion des projets de fin d'étude</span>
+      </div>
+
+      <section class="blog">
+        <div class="container-fluid" style="margin-top: -20px">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des immersions</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col one -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Recherche de stages</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col two -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des alumni</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col three -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des PFE</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des immersions</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col one -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Recherche de stages</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col two -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des alumni</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col three -->
+
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des PFE</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des immersions</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col one -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Recherche de stages</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col two -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des alumni</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col three -->
+
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des PFE</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des immersions</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col one -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Recherche de stages</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col two -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des alumni</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- END Col three -->
+              <div class="col-xs-6 col-sm-3">
+                <div class="card text-center">
+                  <div class="title">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <h2>Gestion des PFE</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="body">
+              <div class="pagination">
+                <ul>
+                  <!--pages or li are comes from javascript -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HEADER -->
+
+      <!-- NAVBAR -->
+
+      <!-- FILTER -->
+
+      <!-- PORTFOLIO -->
+
+      <!-- SCRIPT -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/main.min.js"></script>
+    </section>
+  </body>
+</html>
