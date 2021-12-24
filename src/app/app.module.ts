@@ -26,6 +26,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { EnvoyermessageComponent } from './component/formulaire/envoyermessage/envoyermessage.component';
 import { PubliercommentaireComponent } from './component/formulaire/publiercommentaire/publiercommentaire.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { OrganiserReunionComponent } from './component/formulaire/organiser-reunion/organiser-reunion.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     GerantPfeComponent,
     CreationprojetComponent,
     EnvoyermessageComponent,
-    PubliercommentaireComponent
+    PubliercommentaireComponent,
+    OrganiserReunionComponent
   ],
   imports: [
     BrowserModule,

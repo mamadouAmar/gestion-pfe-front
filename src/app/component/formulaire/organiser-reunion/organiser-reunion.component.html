@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<p>organiser-reunion works!</p>
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <div class="form-header">
+                        <h1>Oragniser une réunion</h1>
+                    </div>
+                    <form>
+                        <div> <span class="form-label">Sujet</span> </div>
+                        <div class="form-group"> <input class="form-control" type="text" placeholder="Entrer le sujet de la réunion" required></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div> <span class="form-label">Choisir une date</span> </div>
+                                <div class="form-group"> <input class="form-control" type="date" id="date" class="form-control" name="date" ng-model="date" required></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div> <span class="select-arrow"></span> <span class="form-label">Lieu de la réunion</span> </div>
+                                     <select class="form-control" required id="lieu" type="lieu" name="lieu" ng-model="lieu">
+                                        <option value="" selected hidden>Choisir un lieu</option>
+                                        <option>Campus de l'EPT</option>
+                                        <option>En entreprise</option>
+                                        <option>En ligne</option>
+                                    </select></div>
+                            </div>
+                            <!-- <div class="col-md-4">
+                                <div class="form-group"> 
+                                    <div> <span class="select-arrow"></span> <span class="form-label">Participants à la réunion:</span> </div>
+                                    <button mat-button [matMenuTriggerFor]="participants">Participants :</button>
+                                    <mat-menu #participants
+                                    ="matMenu">
+                                    <button mat-menu-item [matMenuTriggerFor]="encadreurs" ng-for="encadreur">Encadreurs :</button>
+                                    <button mat-menu-item [matMenuTriggerFor]="soutenants" >Soutenants :</button>
+                                    </mat-menu>
+    
+                                    <mat-menu #encadreurs="matMenu" ng-model="encadreurs" >
+                                    <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+                                    <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+                                    <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button> 
+                                    <div><label>Modou Kane :</label><input type="checkbox"></div>
+                                    <div><label>Modou Kane :</label><input type="checkbox"></div>
+                                    <div><label>Modou Kane :</label><input type="checkbox"></div>
+                                    <div><label>Modou Kane :</label><input type="checkbox"></div>
+                                    <div><label>Modou Kane :</label><input type="checkbox"></div>
+                                    <div><label>Modou Kane :</label><input type="checkbox"></div>
+                                    <div><label>Modou Kane :</label><input type="checkbox"></div>
+                                    <button mat-menu-item>{{encadreurs[1].prenom}} {{encadreurs[1].nom}}</button>
+                                    <button mat-menu-item>{{encadreurs[2].prenom}} {{encadreurs[2].nom}}</button>
+                                    <button mat-menu-item>{{encadreurs[3].prenom}} {{encadreurs[3].nom}}</button>
+                                     
+                                    </mat-menu>
+    
+                                    <mat-menu #soutenants="matMenu">
+                                    <button mat-menu-item>Insects</button>
+                                    <button mat-menu-item>Molluscs</button>
+                                    <button mat-menu-item>Crustaceans</button>
+                                    <button mat-menu-item>Corals</button>
+                                    <button mat-menu-item>Arachnids</button>
+                                    <button mat-menu-item>Velvet worms</button>
+                                    <button mat-menu-item>Horseshoe crabs</button>
+                                    </mat-menu></div>
+                            </div>
+                            -->
+                            <div class="col-md-4">
+                                <div class="form-group"> 
+                        
+                                <div> <span class="form-label">Encadreurs participants </span> </div>
+                                <mat-form-field id="encadreurs" type="encadreurs" class="form-control" name="encadreurs" ng-model="encadreurs" >
+                                    <mat-select multiple>
+                                      <mat-option >{{encadreurs[0].prenom}} {{encadreurs[0].nom}}</mat-option>
+                                      <mat-option >{{encadreurs[1].prenom}} {{encadreurs[1].nom}}</mat-option>
+                                      <mat-option >{{encadreurs[2].prenom}} {{encadreurs[2].nom}}</mat-option>
+                                      <mat-option >{{encadreurs[3].prenom}} {{encadreurs[3].nom}}</mat-option>
+
+                                    </mat-select>
+                                  </mat-form-field>
+                                
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group"> 
+                        
+                                <div> <span class="form-label">Soutenants participants : </span> </div>
+                                <mat-form-field id="encadreurs" type="encadreurs" class="form-control" name="encadreurs" ng-model="encadreurs" >
+                                    <mat-select multiple>
+                                      <mat-option > Kadia Bassoum</mat-option>
+                                      <mat-option>Mariam Bril</mat-option>
+                                      <mat-option >Mamadou Amar Abdoulaye Diallo</mat-option>
+                                      <mat-option > Madjiguène Faye</mat-option>
+
+                                    </mat-select>
+                                  </mat-form-field>
+                                
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group"> <div> <span class="form-label">Projet concerné </span> </div>
+                                <select id="sujet" type="sujet" class="form-control" name="sujet" ng-model="sujet" > 
+                                    <option id="counter_id" >{{sujet[0]}}</option>
+                                    <option id="counter_id" >{{sujet[1]}}</option>
+                                    <option id="counter_id" >{{sujet[2]}}</option>
+                                    <option id="counter_id" >{{sujet[3]}}</option>
+                                </select></div>
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="form-btn"> <button class="submit-btn">Programmer la réunion</button> </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div id="encadreurs" type="encadreurs" class="form-control" name="encadreurs" ng-model="encadreurs" ><label>{{encadreurs[0].prenom}}{{encadreurs[0].nom}} </label><input type="checkbox"></div>
+                                <div id="encadreurs" type="encadreurs" class="form-control" name="encadreurs" ng-model="encadreurs" ><label>{{encadreurs[1].prenom}}{{encadreurs[1].nom}} </label><input type="checkbox"></div>
+                                <div id="encadreurs" type="encadreurs" class="form-control" name="encadreurs" ng-model="encadreurs" ><label>{{encadreurs[2].prenom}}{{encadreurs[2].nom}} </label><input type="checkbox"></div>
+                                <div id="encadreurs" type="encadreurs" class="form-control" name="encadreurs" ng-model="encadreurs" ><label>{{encadreurs[3].prenom}}{{encadreurs[3].nom}} </label><input type="checkbox"></div> -->
+
+                                <!-- <select id="encadreurs" type="encadreurs" class="form-control" name="encadreurs" ng-model="encadreurs" > 
+                                    <option id="counter_id" >{{encadreurs[0].prenom}}{{encadreurs[0].nom}}<option>
+                                    <option id="counter_id" >{{encadreurs[0].prenom}}{{encadreurs[0].nom}}</option>
+                                    <option id="counter_id" >{{encadreurs[0].prenom}}{{encadreurs[0].nom}}</option>
+                                    <option id="counter_id" >{{encadreurs[0].prenom}}{{encadreurs[0].nom}}</option>
+                                </select> -->

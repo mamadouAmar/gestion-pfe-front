@@ -21,8 +21,8 @@ export class ProjetFinDetudeService {
     return this.http.get<ProjetFinDetude>(`${this.apiUrl}/etude/ProjetFinDetudes/${id}`);
   }
 
-  public postOne(depense : ProjetFinDetude) : Observable<ProjetFinDetude> {
-    return this.http.post<ProjetFinDetude>(`${this.apiUrl}/etude/ProjetFinDetudes`, depense);
+  public postOne(projet : ProjetFinDetude) : Observable<ProjetFinDetude> {
+    return this.http.post<ProjetFinDetude>(`${this.apiUrl}/etude/ProjetFinDetudes`, projet);
   }
 
   public delete(id : Number) : Observable<void> {
